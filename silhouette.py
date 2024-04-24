@@ -15,7 +15,7 @@ def plot_silhouette(X, max_clusters=10):
     silhouette_scores = []
     
     for n_clusters in range(2, max_clusters + 1):
-        kmeans = KMeans(n_clusters=n_clusters, random_state=42)
+        kmeans = KMeans(n_clusters=n_clusters, random_state=0)
         cluster_labels = kmeans.fit_predict(X)
         silhouette_avg = silhouette_score(X, cluster_labels)
         silhouette_scores.append(silhouette_avg)
@@ -24,4 +24,5 @@ def plot_silhouette(X, max_clusters=10):
     plt.xlabel('Number of clusters')
     plt.ylabel('Silhouette score')
     plt.title('Silhouette Method for Optimal k')
+    plt.set_ylim(0, 1)
     plt.show()
