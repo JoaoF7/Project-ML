@@ -24,5 +24,4 @@ def plot_silhouette(X, max_clusters=10):
     plt.xlabel('Number of clusters')
     plt.ylabel('Silhouette score')
     plt.title('Silhouette Method for Optimal k')
-    plt.set_ylim(0, 1)
     plt.show()
