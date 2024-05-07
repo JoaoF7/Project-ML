@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
-def plot_silhouette(X, max_clusters=10):
+def plot_silhouette(X, max_clusters=15):
     '''
     Calculates silhouette scores and plots a silhouette graph
     Arguments: 
