@@ -2,6 +2,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def visualize_dimensionality_reduction_umap(transformation, targets):
+    """Visualizes the output of a UMAP transformation using a scatter plot.
+    
+    Args:
+        transformation (np.ndarray): The 2D array resulting from the UMAP transformation.
+        targets (array-like): The class labels for each point in the dataset.
+    Returns:
+        None, but a umap plot is produced
+    """
     # Ensure targets are numpy array
     targets = np.array(targets)
     

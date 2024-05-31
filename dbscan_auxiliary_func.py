@@ -5,6 +5,16 @@ from sklearn.neighbors import NearestNeighbors
 
 
 def get_kdist_plot(X=None, k=None, radius_nbrs=1.0):
+    """Plots a graph to help find out what is the best value for epsilon in the DBSCAN function.
+
+    Args:
+        X: Dataset (array-like or matrix)
+        k (int): The value you intend to use as k in the DBSCAN function
+        radius_nbrs (float, optional): Radius parameter for nearest neighbors. Defaults to 1.0.
+        
+    Returns:
+    None, but a plot is produced.
+    """
 
     nbrs = NearestNeighbors(n_neighbors=k, radius=radius_nbrs).fit(X)
 

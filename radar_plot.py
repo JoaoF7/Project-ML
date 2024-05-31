@@ -3,6 +3,16 @@ import matplotlib.pyplot as plt
 
 
 def create_radar_chart(data, cluster, categories):
+    """Creates a radar chart for the specified cluster.
+
+    Args:
+        data (pd.DataFrame): The data containing the cluster information.
+        cluster (int): The specific cluster to plot.
+        categories (list of str): The categories to plot on the radar chart.
+        
+    Returns:
+    None, but a radar chart is produced
+    """
     N = len(categories)
     angles = [n / float(N) * 2 * pi for n in range(N)]
     angles += angles[:1]

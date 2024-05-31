@@ -9,7 +9,7 @@ def plot_dendrogram(model, **kwargs):
     - model(HierarchicalClustering Model): hierarchical clustering model.
     - **kwargs
     Returns:
-    None, but dendrogram plot is produced.
+        None, but dendrogram plot is produced.
     '''
     # create the counts of samples under each node
     counts = np.zeros(model.children_.shape[0])
